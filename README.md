@@ -2,10 +2,10 @@
 
 **AI 기반 한국 비자 서류 자동 작성 플랫폼**
 
-
+<br/>
 <div align="center">
   <h2 K-E Audio Benchmark Project</h2>
-  <p><strong>외국인의 한국 체류와 관련된 복잡한 행정 절차를 **AI 기반 자동화**로 단순화하는 서비스</strong></p>
+  <p><strong>외국인의 한국 체류와 관련된 복잡한 행정 절차를 AI 기반 자동화로 단순화하는 서비스</strong></p>
 </div>
 
 <br/>
