@@ -58,8 +58,6 @@ graph LR
 
     subgraph "Output"
         C1[Application Form]
-        C2[Plans & Essays]
-        C3[Guarantee Letter]
     end
 
     A --> A1 & A2
