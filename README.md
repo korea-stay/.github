@@ -8,14 +8,14 @@
 <br/>
 
 <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/OpenAI-GPT--4-412991?style=flat-square&logo=openai&logoColor=white"/>
+<img src="https://img.shields.io/badge/OpenAI-GPT--5-412991?style=flat-square&logo=openai&logoColor=white"/>
 <img src="https://img.shields.io/badge/LangChain-RAG-000000?style=flat-square"/>
 <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square"/>
 
 <br/>
 <br/>
 
-[📱 Live Demo](https://your-deployment-url.com) | [🎬 Demo Video](https://youtube.com/your-video-link) | [📖 Wiki / Docs](https://github.com/your-repo/wiki)
+[📱 Live Demo](https://your-deployment-url.com) 
 
 </div>
 
