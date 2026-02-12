@@ -15,7 +15,7 @@
 <br/>
 <br/>
 
-[📱 Website ](https://k-stay.streamlit.app/) 
+[🌐 Official Website ](https://k-stay.streamlit.app/) 
 
 </div>
 
