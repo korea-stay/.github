@@ -3,7 +3,7 @@
 # 🇰🇷 K-Stay
 **Foreigner Visa Document Automation Platform**
 <br/>
-<em>"외국인의 복잡한 출입국 행정 서류, AI가 완벽하게 자동화합니다."</em>
+<em>"외국인의 복잡한 행정 서류, AI가 완벽하게 자동화합니다."</em>
 
 <br/>
 
