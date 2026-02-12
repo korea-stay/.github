@@ -144,23 +144,32 @@ streamlit run main.py
 
 ## 🧩 시스템 흐름 (System Flow)
 
-graph TD
-    User((User)) -->|Login| Universal[Layer 1: Universal Fact<br/>(Load from DB)]
-    User -->|Select Scenario| Gate{Payment Check<br/>($9.99)}
+```mermaid
+graph LR
+    User[사용자 입력] --> A[Data Layer]
+    A --> B{AI Engine}
+    B --> C[Document Layer]
+
+    subgraph "Data Structuring"
+        A1(Universal Fact<br/>기본 인적사항)
+        A2(Variable Fact<br/>체류/재정 정보)
+    end
     
-    Gate --Paid--> Variable[Layer 2: Variable Fact<br/>(Input Form)]
-    Variable --> Narrative[Layer 3: Narrative Chat]
-    
-    Narrative -->|Drafting| AI[AI Active Validator<br/>(GPT-4 + RAG)]
-    AI --Feedback/Correction--> Narrative
-    
-    Narrative --Approved--> Mapper[Dynamic Form Mapper]
-    Universal --> Mapper
-    Variable --> Mapper
-    
-    Mapper -->|Doc Injection| Output[📦 Full Package.zip]
-    Output --> User
-```
+    subgraph "AI Processing"
+        B1(Narrative Generation<br/>서술형 작성)
+        B2(RAG Validator<br/>법령 검토)
+    end
+
+    subgraph "Output"
+        C1[통합신청서]
+        C2[계획서/사유서]
+        C3[신원보증서]
+    end
+
+    A --> A1 & A2
+    A1 & A2 --> B1
+    B1 --> B2
+    B2 --> C1 & C2 & C3
 
 ---
 
