@@ -221,10 +221,7 @@ cd k-stay
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# 3. 패키지 설치
-pip install -r requirements.txt
-
-# 4. 서버 실행
+# 3. 서버 실행
 python main.py
 ```
 
