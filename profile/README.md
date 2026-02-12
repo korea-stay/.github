@@ -40,6 +40,35 @@
 
 K-Stay는 데이터의 성격에 따라 3계층(Layer)으로 분리하여 처리합니다.
 
+```mermaid
+graph LR
+    User[User Input] --> A[Data Layer]
+    A --> B{AI Engine}
+    B --> C[Document Layer]
+
+    subgraph "Data Structuring"
+        A1(Layer 1: Universal Fact<br/>Immutable)
+        A2(Layer 2: Variable Fact<br/>Scenario-based)
+    end
+    
+    subgraph "AI Processing"
+        B1(Layer 3: Narrative<br/>Drafting)
+        B2(RAG Validator<br/>Legal Check)
+    end
+
+    subgraph "Output"
+        C1[Application Form]
+        C2[Plans & Essays]
+        C3[Guarantee Letter]
+    end
+
+    A --> A1 & A2
+    A1 & A2 --> B1
+    B1 --> B2
+    B2 --> C1
+    B2 --> C2
+    B2 --> C3
+
 | Layer | Type | Definition | AI Role |
 | :--- | :--- | :--- | :--- |
 | **Layer 1** | **Universal Fact** | 성명, 여권번호, 국적 등 평생 변하지 않는 **불변 정보** | ❌ (DB 매핑) |
@@ -69,6 +98,8 @@ K-Stay는 데이터의 성격에 따라 3계층(Layer)으로 분리하여 처리
 
 <br/>
 
+
+
 ## 🗂 지원 시나리오 (Golden Six)
 
 | Track | Scenario | Code | Key Documents (Auto-Generated) |
@@ -82,36 +113,7 @@ K-Stay는 데이터의 성격에 따라 3계층(Layer)으로 분리하여 처리
 
 <br/>
 
-## 🧩 시스템 흐름 (System Flow)
 
-```mermaid
-graph LR
-    User[사용자 입력] --> A[Data Layer]
-    A --> B{AI Engine}
-    B --> C[Document Layer]
-
-    subgraph "Data Structuring"
-        A1(Universal Fact<br/>기본 인적사항)
-        A2(Variable Fact<br/>체류/재정 정보)
-    end
-    
-    subgraph "AI Processing"
-        B1(Narrative Generation<br/>서술형 작성)
-        B2(RAG Validator<br/>법령 검토)
-    end
-
-    subgraph "Output"
-        C1[통합신청서]
-        C2[계획서/사유서]
-        C3[신원보증서]
-    end
-
-    A --> A1 & A2
-    A1 & A2 --> B1
-    B1 --> B2
-    B2 --> C1 & C2 & C3
-
----
 
 
 ## 🚀 실행 방법 (Getting Started)
