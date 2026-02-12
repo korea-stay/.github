@@ -43,8 +43,6 @@ K-Stay는 데이터의 성격에 따라 3계층(Layer)으로 분리하여 처리
 ```mermaid
 graph LR
     User[User Input] --> A[Data Layer]
-    A --> B{AI Engine}
-    B --> C[Document Layer]
 
     subgraph "Data Structuring"
         A1(Layer 1: Universal Fact<br/>Immutable)
