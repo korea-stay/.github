@@ -15,7 +15,7 @@
 <br/>
 <br/>
 
-[📱 Live Demo](https://your-deployment-url.com) 
+[📱 Service URL ](https://k-stay.streamlit.app/) 
 
 </div>
 
