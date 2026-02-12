@@ -144,24 +144,22 @@ streamlit run main.py
 
 ## 🧩 시스템 흐름 (System Flow)
 
-```mermaid
 graph TD
-    User((User)) -->|Sign Up| Universal[Layer 1: Universal Fact<br/>(Supabase DB)]
-    User -->|Select Scenario| Gate{Payment<br/>(Stripe $9.99)}
+    User((User)) -->|Login| Universal[Layer 1: Universal Fact<br/>(Load from DB)]
+    User -->|Select Scenario| Gate{Payment Check<br/>($9.99)}
     
-    Gate --Paid--> Variable[Layer 2: Variable Fact<br/>(Streamlit Form)]
-    Variable --> Narrative[Layer 3: Narrative Input]
+    Gate --Paid--> Variable[Layer 2: Variable Fact<br/>(Input Form)]
+    Variable --> Narrative[Layer 3: Narrative Chat]
     
-    Narrative -->|Review Request| AI[AI Active Validator<br/>(GPT-4 + RAG)]
-    AI --Feedback--> Narrative
+    Narrative -->|Drafting| AI[AI Active Validator<br/>(GPT-4 + RAG)]
+    AI --Feedback/Correction--> Narrative
     
     Narrative --Approved--> Mapper[Dynamic Form Mapper]
     Universal --> Mapper
     Variable --> Mapper
     
-    Mapper -->|docx Injection| Output[📦 Full Package.zip]
+    Mapper -->|Doc Injection| Output[📦 Full Package.zip]
     Output --> User
-
 ```
 
 ---
