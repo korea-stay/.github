@@ -64,8 +64,6 @@ graph LR
     A1 & A2 --> B1
     B1 --> B2
     B2 --> C1
-    B2 --> C2
-    B2 --> C3
 ```
 
 | Layer | Type | Definition | AI Role |
