@@ -15,7 +15,7 @@
 <br/>
 <br/>
 
-[📱 Service URL ](https://k-stay.streamlit.app/) 
+[📱 Website ](https://k-stay.streamlit.app/) 
 
 </div>
 
