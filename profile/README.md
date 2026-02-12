@@ -84,7 +84,7 @@ graph LR
 * **Vector DB**: Pinecone / FAISS (법령 및 매뉴얼 RAG 검색용)
 
 ### AI & Logic
-* **LLM**: OpenAI GPT-4 (Narrative 생성 및 검토)
+* **LLM**: OpenAI GPT-5 (Narrative 생성 및 검토)
 * **Doc Processing**: `python-docx` (Word 템플릿 파싱 및 데이터 주입)
 * **RAG Engine**: LangChain (하이코리아 매뉴얼, 출입국관리법 기반 질의응답)
 
