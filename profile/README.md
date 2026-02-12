@@ -173,7 +173,7 @@ streamlit run main.py
 
 <div align="center">
 
-**© 2024 K-Stay Project** 
+**© 2025 K-Stay Project** 
 
 
 
