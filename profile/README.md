@@ -82,6 +82,38 @@ K-Stay는 데이터의 성격에 따라 3계층(Layer)으로 분리하여 처리
 
 <br/>
 
+## 🧩 시스템 흐름 (System Flow)
+
+```mermaid
+graph LR
+    User[사용자 입력] --> A[Data Layer]
+    A --> B{AI Engine}
+    B --> C[Document Layer]
+
+    subgraph "Data Structuring"
+        A1(Universal Fact<br/>기본 인적사항)
+        A2(Variable Fact<br/>체류/재정 정보)
+    end
+    
+    subgraph "AI Processing"
+        B1(Narrative Generation<br/>서술형 작성)
+        B2(RAG Validator<br/>법령 검토)
+    end
+
+    subgraph "Output"
+        C1[통합신청서]
+        C2[계획서/사유서]
+        C3[신원보증서]
+    end
+
+    A --> A1 & A2
+    A1 & A2 --> B1
+    B1 --> B2
+    B2 --> C1 & C2 & C3
+
+---
+
+
 ## 🚀 실행 방법 (Getting Started)
 
 ### 1. 저장소 클론 (Clone)
@@ -141,37 +173,6 @@ streamlit run main.py
 ```
 
 브라우저에서 `http://localhost:8501`로 접속하여 확인합니다.
-
-## 🧩 시스템 흐름 (System Flow)
-
-```mermaid
-graph LR
-    User[사용자 입력] --> A[Data Layer]
-    A --> B{AI Engine}
-    B --> C[Document Layer]
-
-    subgraph "Data Structuring"
-        A1(Universal Fact<br/>기본 인적사항)
-        A2(Variable Fact<br/>체류/재정 정보)
-    end
-    
-    subgraph "AI Processing"
-        B1(Narrative Generation<br/>서술형 작성)
-        B2(RAG Validator<br/>법령 검토)
-    end
-
-    subgraph "Output"
-        C1[통합신청서]
-        C2[계획서/사유서]
-        C3[신원보증서]
-    end
-
-    A --> A1 & A2
-    A1 & A2 --> B1
-    B1 --> B2
-    B2 --> C1 & C2 & C3
-
----
 
 <div align="center">
 
