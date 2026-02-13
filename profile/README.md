@@ -113,61 +113,31 @@ graph LR
 
 ## 🚀 실행 방법 (Getting Started)
 
-### 1. 저장소 클론 (Clone)
+### 1. 저장소 클론
 ```bash
-git clone https://github.com/korea-stay/k-stay.git
-cd k-stay
-
+git clone https://github.com/your-username/kstay.git
+cd kstay
 ```
 
-### 2. 가상환경 설정 (Venv)
-
+### 2. 가상환경 설정
 ```bash
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
-
+pip install -r requirements.txt
 ```
 
-### 3. 환경 변수 설정 (.env)
-
-프로젝트 루트에 `.env` 파일을 생성하고 아래 내용을 채워주세요. (필수)
-
-```ini
-# .env file
-
-# 1. OpenAI (Intelligence)
-OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx
-
-# 2. Supabase (Database & Auth)
-SUPABASE_URL=[https://your-project.supabase.co](https://your-project.supabase.co)
-SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6Ik... (Service Role or Anon Key)
-
-# 3. Stripe (Payment)
-STRIPE_API_KEY= _test_xxxxxxxxxxxxxxxxxxxxxx(
-STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxxxxxxx (Optional for Webhook)
-
-# 4. RAG / Vector DB (Optional)
-PINECONE_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-PINECONE_ENV=gcp-starter
-
-```
-
-### 4. 템플릿 준비 (Templates)
-
-`templates/` 폴더 내에 하이코리아 공식 `.docx` 파일들이 위치해야 합니다.
-
-* `templates/통합신청서_34호.docx`
-* `templates/구직활동계획서.docx`
-* ... (기타 서식)
-
-### 5. 서버 실행 (Run)
-
-Streamlit을 사용하여 웹 애플리케이션을 실행합니다.
-
+### 3. 환경 설정
 ```bash
-streamlit run main.py
-
+mkdir -p .streamlit
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+# secrets.toml 파일을 편집하여 API 키 입력
 ```
+
+### 4. 실행
+```bash
+streamlit run app.py
+```
+
 
 브라우저에서 `http://localhost:8501`로 접속하여 확인합니다.
 
