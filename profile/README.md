@@ -115,7 +115,7 @@ graph LR
 
 ### 1. 저장소 클론 (Clone)
 ```bash
-git clone [https://github.com/korea-stay/k-stay.git](https://github.com/korea-stay/k-stay.git)
+git clone https://github.com/korea-stay/k-stay.git
 cd k-stay
 
 ```
